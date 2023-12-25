@@ -16,12 +16,29 @@ const questions = [
 	correct: "a",
 },
 {
+	que: "Which one of the following is an ternary operator:",
+	a: "?",
+	b: ":",
+	c: "-",
+	d: "+",
+	correct:"a",
+},
+{
 	que: "What year was JavaScript launched?",
 	a: "1996",
 	b: "1995",
 	c: "1994",
 	d: "none of the above",
 	correct: "b",
+},
+{
+	que: "Which one of the following operator returns false if both values are equal?",
+	a: "!",
+	b: "!==",
+	c: "!=",
+	d: "All of the above",
+	correct: "c",
+
 },
 {
 	'que': "What does CSS stands for?",
