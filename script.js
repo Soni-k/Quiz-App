@@ -33,15 +33,21 @@ const questions = [
 }
 ];
 
-let index = 3;
+let index = 0;
+let total = questions.length;
+let right=0, wrong=0;
 const quesBox =document.getElementById("quesBox");
 const optInp =document.querySelectorAll('.opts');
 
 
 const loadQuestion =()=>{
+	if(index ===total){
+		return endQuiz()
+	}
+	reset();
 	const data = questions[index]
 	console.log(data)
-	quesBox.innerText=` ${index+1}) ${data.que}`;
+	quesBox.innerText=` ${index+1}.) ${data.que}`;
 	
     optInp[0].nextElementSibling.innerText = data.a
     optInp[1].nextElementSibling.innerText = data.b
@@ -49,5 +55,56 @@ const loadQuestion =()=>{
     optInp[3].nextElementSibling.innerText = data.d
 }
 
+const submitQuiz=()=>{
+	const data = questions[index];
+	const ans =getAnswer()
+	// console.log(ans, data.correct);
+    if(ans ==data.correct)
+	{
+		right++;
+	}else{
+		wrong++;
+	}
+	index++;
+	loadQuestion();
+	return;
+}
+
+const getAnswer=()=>{
+	let answer;
+	optInp.forEach(
+		(input)=>{
+			if(input.checked){
+			   answer =input.value;
+			}
+		}
+	)
+	return answer;
+}
+
+const reset =()=>{
+	optInp.forEach(
+		(input)=>{
+			input.checked=false;
+		}
+	)
+}
+
+const endQuiz =()=>{
+   document.getElementById("container").innerHTML=`
+   <div style="text-align:center "> 
+     <h3>Thank you for playing the quiz</h3>
+	 <h2> ${right} /${total} are correct </h2>
+	 </div>
+    `
+}
+
+
 // initial call reload page
 loadQuestion();
+
+
+
+
+
+
