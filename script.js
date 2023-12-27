@@ -8,11 +8,43 @@ const questions = [
 	'correct': "d",
 },
 {
+	que:" Which type of JavaScript language is ___",
+	a: "Object-Oriented",
+	b: "Object-Based",
+	c: "Assembly-language",
+	d: "High-level",
+	correct: "b"
+},
+{
 	que: "What does HTML stand for?",
 	a: "Hypertext Markup Language",
 	b: "Cascading Style Sheet",
 	c: "Jason Object Notation",
 	d: "Helicopters Terminals Motorboats Lamborginis",
+	correct: "a",
+},
+{
+	que:" Which one of the following also known as Conditional Expression:",
+	a:"Alternative to if-else",
+	b: "Switch statement",
+	c: "If-then-else statement",
+	d:"immediate if",
+	correct:"d",
+},
+{
+   que:" The CSS property used to control the element's font-size is -",
+   a: "text-style",
+   b: "text-size",
+   c :"font-size",
+   d: "None of the above",
+   correct:"c",
+},
+{
+	que :" Which of the following CSS property is used to add shadows to the text?",
+	a:"text-shadow",
+	b:"text-stroke",
+	c: "text-overflow",
+	d: "text-decoration",
 	correct: "a",
 },
 {
